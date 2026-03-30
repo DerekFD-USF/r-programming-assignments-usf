@@ -1,0 +1,14 @@
+Package: Derek
+Title: First Package Test
+Version: 0.0.0.9000
+Authors@R: person("Derek", "Fernandez-Davies", email = "derekfernandezdavies@usf.edu", role = c("aut", "cre"))
+Description: A preliminary R testing package.
+License: CC0
+Imports:
+  dplyr,
+  lubridate,
+  ggplot2
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+LazyData: true
