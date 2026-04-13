@@ -1,0 +1,52 @@
+---
+title: "My R Markdown Primer"
+author: "Derek"
+date: "2026-04-13"
+output: html_document
+---
+
+## What is R Markdown
+
+Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. R Markdown documents are fully reproducible. 
+
+Here is a formula for a simple linear model:
+
+$$y_i = \beta_0 + \beta_1 x_i + \epsilon_i$$
+
+In this section, we will load our libraries (ggplot). We will then create a dataset for all ages in a family and plot that data.
+
+```{r load-data, message = FALSE, warning = FALSE}
+library(ggplot2)
+
+mother <- 32
+father <- 31
+son <- 5
+daughter <- 3
+uncle <- 28
+aunt <- 24
+grandma <- 64
+grandpa <- 70
+
+familydf <- data.frame(FamilyMembers = c("mother", "father", "son", "daughter", "uncle", "aunt", "grandma", "grandpa"), 
+           Age = c(mother, father, son, daughter, uncle, aunt, grandma, grandpa))
+
+```
+
+
+```{r load-plot, message = FALSE, warning = FALSE}
+
+familyplt <- ggplot(familydf, aes(Age, FamilyMembers)) + 
+  theme_classic() +
+  geom_segment(aes(x = 0, xend = Age, y = reorder(FamilyMembers, Age), yend = reorder(FamilyMembers, Age))) +
+  labs(title = "Family Age Distribution", 
+       subtitle = "Ranked from youngest to oldest", x = "Age (Years)", y = NULL
+       ) +
+  geom_point()
+
+familyplt
+
+
+```
+
+
+Writing in R Markdown is very different from a regular report. R Markdown allows for dynamic reports that have visualizations and coding embedded into the report itself. It can be used to explain or demonstrate topics much more efficiently than a normal report is capable of. Everything in R Markdown can be reproduced very easily. 
