@@ -8,7 +8,12 @@
 }
 \arguments{
 \item{x}{an object of class 'stock_data'.}
+
+\item{...}{Additional arguments passed to the generic plot function.}
+}
+\value{
+A \code{ggplot} object displaying the historical closing price trend over time.
 }
 \description{
-A custom visualization method for objects of class 'stock_data'.
+A custom visualization method for objects of class 'stock_data' using ggplot. Creates a time series of historical stock pricing based on the columns of "close" and "date".
 }

@@ -13,5 +13,5 @@ cln_mrkt_data(data)
 A cleaned tibble with the added S3 class 'stock_data'.
 }
 \description{
-This function takes raw messy financial data and standardizes it. It formats date and time as well as standardizes all columns in lowercase. The column names get formatted to remove any underscore or dashes. It also skips any date formatting steps if the data does not have a 'Date' column.
+This function takes raw messy financial data and standardizes it. It formats date and time as well as standardizes all columns in lowercase. The column names get formatted to remove any underscore or dashes. It also skips any date formatting steps if the data does not have a 'date' column.
 }

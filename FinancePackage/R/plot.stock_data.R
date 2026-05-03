@@ -1,8 +1,9 @@
 #' Plot Stock Trend S3 Method
 #'
-#' @description A custom visualization method for objects of class 'stock_data'.
+#' @description A custom visualization method for objects of class 'stock_data' using ggplot. Creates a time series of historical stock pricing based on the columns of "close" and "date".
 #' @param x an object of class 'stock_data'.
 #' @param ... Additional arguments passed to the generic plot function.
+#' @return A \code{ggplot} object displaying the historical closing price trend over time.
 #'
 #' @import ggplot2
 #' @import lubridate

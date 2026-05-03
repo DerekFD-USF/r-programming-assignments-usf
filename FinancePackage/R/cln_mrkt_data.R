@@ -1,6 +1,6 @@
 #' Cleaning Stock Market Data
 #'
-#' @description This function takes raw messy financial data and standardizes it. It formats date and time as well as standardizes all columns in lowercase. The column names get formatted to remove any underscore or dashes. It also skips any date formatting steps if the data does not have a 'Date' column.
+#' @description This function takes raw messy financial data and standardizes it. It formats date and time as well as standardizes all columns in lowercase. The column names get formatted to remove any underscore or dashes. It also skips any date formatting steps if the data does not have a 'date' column.
 #' @param data A data frame or tibble containing stock data.
 #' @return A cleaned tibble with the added S3 class 'stock_data'.
 #' @importFrom dplyr as_tibble rename_with mutate arrange
@@ -15,7 +15,7 @@ cln_mrkt_data <- function(data) {
   }
 
   df <- as_tibble(data) %>%
-    rename_with(function(col) tolower(gsub("[_-]", "", col)))
+    rename_with(function(col) tolower(gsub("[._-]", "", col)))
 
   if("date" %in% colnames(df)) {
     df <- df %>%
