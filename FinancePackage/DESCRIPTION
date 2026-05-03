@@ -1,0 +1,18 @@
+Package: FinancePackage
+Type: Package
+Title: FinPack: Financial Data Cleaning and Visualization
+Version: 0.1.0
+Authors@R: person("Derek", "Fernandez-Davies", email = "derekfernandezdavies@usf.edu", role = c("aut", "cre"))
+Description: The goal of this package is to provide tools for cleaning, formatting, and visualizing historical stock market data. 
+    This package is designed for financial analysts who need to prepare messy financial data for machine learning and predictive modeling without creating their own cleaning functions.
+License: CC0
+Imports:
+    dplyr,
+    tidyr,
+    lubridate,
+    ggplot2,
+    magrittr
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+LazyData: true
